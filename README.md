@@ -3,6 +3,6 @@
 
 This assignment builds a D3 scatter plot (with state abbreviation labels) representing the correlation between those in poverty (%) and lacking healtcare (%).
 
-* *NOTE: The Bonus portion was NOT attempted
+_ _ NOTE: The Bonus portion was NOT attempted
 
 ![Screenshot](screenshots/D3_screenshot.png)

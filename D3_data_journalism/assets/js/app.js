@@ -38,8 +38,6 @@ d3.csv("assets/data/data.csv").then(function(inputData) {
     inputData.forEach(function(obj) {
         obj.poverty = +obj.poverty;
         obj.healthcare =+ obj.healthcare;
-        // console.log(obj.poverty);
-        // console.log(obj.healthcareLow);
       });
 
         
@@ -47,11 +45,9 @@ d3.csv("assets/data/data.csv").then(function(inputData) {
     // ==============================  
     var xLinearScale = d3.scaleLinear()
       .domain([8.5, d3.max(inputData, o => o.poverty +2)])
-      //.domain(d3.extent(inputData, d => d.poverty))
       .range([0, width]);
 
     var yLinearScale = d3.scaleLinear()
-      // .domain([1, d3.max(inputData, o => o.healthcareLow +4)])
       .domain([3,d3.max(inputData, d => d.healthcare +4)])
       .range([height, 0]);
 
@@ -60,9 +56,6 @@ d3.csv("assets/data/data.csv").then(function(inputData) {
     // ==============================
     var bottomAxis = d3.axisBottom(xLinearScale);
     var leftAxis = d3.axisLeft(yLinearScale);   
-
-    // console.log(bottomAxis);
-    // console.log(leftAxis);
 
     // Step 4: Append Axes to the chart
     // ==============================
